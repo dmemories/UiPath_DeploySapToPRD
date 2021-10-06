@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="776.834355828221,928.78527607362" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/credentials" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="662.576687116564,928.78527607362" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/credentials" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="60">
       <x:String>System.Activities</x:String>
@@ -70,17 +70,14 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="672.588957055215,864" sap2010:WorkflowViewState.IdRef="TryCatch_1">
     <TryCatch.Variables>
       <Variable x:TypeArguments="s:Exception" Name="g_exception" />
       <Variable x:TypeArguments="x:String" Name="g_username" />
-      <Variable x:TypeArguments="x:Int32" Name="g_timeout">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" Value="20000" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" Default="20000" Name="g_timeout" />
       <Variable x:TypeArguments="ss:SecureString" Name="g_spassword" />
     </TryCatch.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -107,7 +104,6 @@
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">200.036809815951,127.29754601227</av:Point>
               <av:Size x:Key="ShapeSize">200.245398773006,65.3742331288343</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">300.159509202454,192.671779141104 300.159509202454,222.671779141104 300.282208588957,222.671779141104 300.282208588957,242.671779141104</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Sequence DisplayName="Initial" sap:VirtualizedContainerService.HintSize="200.245398773006,65.3742331288343" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -235,22 +231,37 @@
               </sap2010:WorkflowViewState.ViewStateManager>
             </Delay>
           </Sequence>
+        </FlowStep>
+        <FlowStep>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">200.036809815951,242.671779141104</av:Point>
+              <av:Size x:Key="ShapeSize">200.245398773006,50.6503067484663</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">300.159509202454,293.322085889571 300.159509202454,323.322085889571 300.282208588957,323.322085889571 300.282208588957,343.322085889571</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Login_TTS" sap:VirtualizedContainerService.HintSize="200.245398773006,50.6503067484663" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Invokes\Login_TTS.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="in_username">[g_username]</InArgument>
+              <InArgument x:TypeArguments="ss:SecureString" x:Key="in_spassword">[g_spassword]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="in_timeout">[g_timeout]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InvokeWorkflowFile>
           <FlowStep.Next>
             <FlowStep x:Name="__ReferenceID0">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">200.159509202454,242.671779141104</av:Point>
+                  <av:Point x:Key="ShapeLocation">200.159509202454,343.322085889571</av:Point>
                   <av:Size x:Key="ShapeSize">200.245398773006,50.6503067484663</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Login_TTS workflow" sap:VirtualizedContainerService.HintSize="333.938650306748,111.901840490798" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Invokes\Login_TTS.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Create_WR" sap:VirtualizedContainerService.HintSize="200.245398773006,50.6503067484663" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Invokes\Create_WR.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_username">
-                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="g_username" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="ss:SecureString" x:Key="in_spassword">
-                    <mva:VisualBasicValue x:TypeArguments="ss:SecureString" ExpressionText="g_spassword" />
-                  </InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_timeout">
                     <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="g_timeout" />
                   </InArgument>
