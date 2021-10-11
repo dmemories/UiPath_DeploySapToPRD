@@ -1,0 +1,125 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Upload_File" this:Upload_File.in_timeout="5000" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_timeout" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_filename" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>553.61963190184,856.343558282209</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Test2_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <uix:NApplicationCard AttachMode="SingleWindow" DisplayName="Use Application: File Upload" sap:VirtualizedContainerService.HintSize="434.061349693252,791.558282208589" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" ScopeGuid="eea6d30c-d3d9-45ab-ab45-9e5edd801710" Timeout="[in_timeout]" Version="V1">
+    <uix:NApplicationCard.Body>
+      <ActivityAction x:TypeArguments="x:Object">
+        <ActivityAction.Argument>
+          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+        </ActivityAction.Argument>
+        <Sequence DisplayName="File Upload Do" sap:VirtualizedContainerService.HintSize="376.343558282209,503.558282208589" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NTypeInto ActivateBefore="False" ClickBeforeMode="None" DisplayName="Type File Name" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.938650306748,214.380368098159" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="eea6d30c-d3d9-45ab-ab45-9e5edd801710" Text="[in_filename]" Timeout="[in_timeout]" Version="V1">
+            <uix:NTypeInto.Target>
+              <uix:TargetAnchorable DesignTimeRectangle="315, 698, 634, 28" ElementType="InputBox" FriendlyName="'Edit'" FullSelectorArgument="&lt;wnd ctrlid='*' aaname='File name:' cls='Edit' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" Guid="52663e28-9d39-4bd1-a313-c3190e7264e6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAn4AAAAgCAYAAACMy3XOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAGREAABkRAZCHpWgAAACsSURBVHhe7dZBAQAwCAAh+5d2P0PsIAWzAAAkiB8AQMTFb8YBAQB+Jn4AABHiBwAQIX4AABHiBwAQIX4AABHiBwAQIX4AABHiBwAQIX4AABHiBwAQIX4AABHiBwAQIX4AABHiBwAQIX4AABHiBwAQIX4AABHiBwAQIX4AABHiBwAQIX4AABHiBwAQIX4AABHiBwAQIX4AABHiBwAQIX4AABG2BwAQIX4AAAm7D0uCf+hVwN2/AAAAAElFTkSuQmCC" InformativeScreenshot="c753a8bed0711ef1c7bc2e9da34f034a.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='firefox.exe' cls='#32770' title='File Upload' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                <uix:TargetAnchorable.Anchors>
+                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                    <uix:Target DesignTimeRectangle="216, 698, 87, 28" ElementType="Text" FriendlyName="'File &amp;name'" FullSelectorArgument="&lt;wnd ctrlid='1090' title='File &amp;amp;name:' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1090' title='File &amp;amp;name:' check:text='File &amp;amp;name:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFsAAAAgCAYAAAB90wSbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAGREAABkRAZCHpWgAAAIXSURBVGhD7ZfJkcQgDAAdFfGQDcGQC7E4A1bi8ICAAV/aeejRtVtYBqnBwGz7vnuBB5HNiMhmRGQzIrIZEdmMiGxGRDYjIpsRkc3INdlW+23bvLaTNqGCyLZegzCU1qK8cTHOiexLdGUrbby1tsFVsQSRPaUv27iibRGRPUVkM3JN9qk923mrVXgWURAzn0xn8J14TjijvcrvK2jrTKizxmt4dowT4sg4Ice2T9w24xZJclXa23RO1cxqct6o9H7x3suyoT8cFJMxcd83KcnZGFm2hngFSRs8Nw5Bn8M64ExoP+KC+E5ckh36TOdSzmdTBv6Pf8MZdYxVC1ur6YTsMDhF20/comyLyTfJjttLomwyLpLGqSYLZDerOE9AGZfepX3GfAAQXV4Ccg5P1dRf2b3biGuT/i47TRyVdcSSVUfoFRr50m9FJ66Xd9HefG1pwp6q6b1tJCWKbSNakR/KPbt+NigYFgN++nHbSV8FjRsJ6dWDUNk3a3pd9ujOjrjpyl6TfWw5IFnrYt8mcU/JvlrTiwfkYAUusi57NE6n/a7smzW9KLs4NL7M9ohl2Xm10ZxTPs/KvlfTq7JzslhgviYheFVSk9VxemUXY4T+YUsJYz8se62mf7lnAw76LA8s7B+TmKyMM3t2HKPoP/xI6cQ9ITu0z2paki28yU/KLlfMjN77v4qsbEZENiMimxGRzYjIZmP3f0tKAmRyaIYAAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                  </scg:List>
+                </uix:TargetAnchorable.Anchors>
+              </uix:TargetAnchorable>
+            </uix:NTypeInto.Target>
+          </uix:NTypeInto>
+          <uix:NClick ClickType="Single" DisplayName="Click Open" sap:VirtualizedContainerService.HintSize="333.938650306748,155.484662576687" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="eea6d30c-d3d9-45ab-ab45-9e5edd801710" Timeout="[in_timeout]" Version="V1">
+            <uix:NClick.Target>
+              <uix:TargetAnchorable DesignTimeRectangle="1001, 739, 149, 44" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='*' title='*' aaname='Open' cls='Button' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' check:text='unchecked' /&gt;" Guid="90bb66bf-def6-4da8-a868-d7c5745d6255" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJkAAAAwCAYAAAACT9icAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAGREAABkRAZCHpWgAAAJ9SURBVHhe7dnLdcMgEIVh9UQ3VJIdrdAKVWTtDtwBGQQjgTRS9MicE4u7+BayHl7kPwORh/f7HQE0ITJQh8hAXRPZ8PUN8CearpoD4WKAK5qumoNywev1ArgEkYE6RAbqEBmoQ2SgDpGBOkQG6hAZqENkoA6RgTpEBuoQGahDZKAOkYG6LiML3kVrTByGYWKMjc4H8Xq4p7PIQnSGwzLRWkdhEWspsvK5cTGI98JVXUXmbZlaTp5YwdscmvXiebimn8hKQFuBseDyMmq9fB7O6yayPMVs9MK5lo92Oc1KoCm8vJ/LE3GMlpZXH+r7WaDvrPd9tDwv9nw5aBMd3R8cLdl8Le0X3YMi7yQyIZxNZd9W7804snHvRrE4H70nUxjLeOn7xhDna10Jrp6kHJmlc/kfj/qZOb75mZ+rq8h+WyrZaurxXk2ahMHlKKqAt6bm8nNemlfxH1zaPwUiE2xFJt+/nHw7U3N8zjyhtvd/Zybv/9dVZEf/aGNk0nK5sU9qouTJtoOfU+/J2mcisg/E78eE5W5F+ANfiMxY+ocg7bEEoZlkiOwhkZGD+xxxCduN7MRyuYDI+OApkU3TLMUih7b5MpY/r5fQgu+p450m2yqeFiLjg8dElsyhpXdR6Wclzz8rpc9SLPTZMqRpCqbfO/lVA+HXEqv4pn1Z9bqjXG+qcBAZHzwqsixNnzGYMYQS194P5CWytFw2L01LRKsok0ChCN9RTzdExgcPjOy0KjLxPOzqIrJ6mpw1PgOR3dJFZLchslsQ2RGI7BZEdgQiuwWRgTpEBuoQGahDZKAOkYG6w5EB3NV01RwIFwNc0XRVHwBoQGSgDpGBsnf8ARrnJ2UQqTL+AAAAAElFTkSuQmCC" InformativeScreenshot="7cb53fbb09fb0a68ad6c89ca3d90ed99.png" ScopeSelectorArgument="&lt;wnd app='firefox.exe' cls='#32770' title='File Upload' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+            </uix:NClick.Target>
+          </uix:NClick>
+        </Sequence>
+      </ActivityAction>
+    </uix:NApplicationCard.Body>
+    <uix:NApplicationCard.TargetApp>
+      <uix:TargetApp Area="0, 0, 1358, 815" FilePath="C:\Program Files\Mozilla Firefox\firefox.exe" IconBase64="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" InformativeScreenshot="47aab903e589d7f645c271e7c1923822.png" Selector="&lt;wnd app='firefox.exe' cls='#*' title='File Upload' /&gt;" />
+    </uix:NApplicationCard.TargetApp>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+  </uix:NApplicationCard>
+</Activity>

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Login_TTS" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Login_TTS" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_timeout" Type="InArgument(x:Int32)" />
     <x:Property Name="in_currentRound" Type="InArgument(x:String)" />
@@ -7,10 +7,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>704.981595092024,956.466257668712</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>792.736196319018,1215.01840490798</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Login_TTS_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="36">
+    <scg:List x:TypeArguments="x:String" Capacity="72">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -47,6 +47,7 @@
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Xml.Serialization</x:String>
       <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -86,13 +87,13 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="Never" DisplayName="Use Browser Firefox" sap:VirtualizedContainerService.HintSize="668.466257668712,851.631901840491" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="9886ff5e-065b-4d03-aec0-c857d1e14aa6" Version="V1">
+  <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="Never" DisplayName="Use Browser Firefox" sap:VirtualizedContainerService.HintSize="668.466257668712,1150.23312883436" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="9886ff5e-065b-4d03-aec0-c857d1e14aa6" Version="V1">
     <uix:NApplicationCard.Body>
       <ActivityAction x:TypeArguments="x:Object">
         <ActivityAction.Argument>
           <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
         </ActivityAction.Argument>
-        <Flowchart DisplayName="Use Browser Do" sap:VirtualizedContainerService.HintSize="634.306748466258,636.073619631902" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+        <Flowchart DisplayName="Use Browser Do" sap:VirtualizedContainerService.HintSize="634.306748466258,934.674846625767" sap2010:WorkflowViewState.IdRef="Flowchart_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -100,12 +101,13 @@
               <av:Point x:Key="ShapeLocation">29.9631901840491,22.601226993865</av:Point>
               <av:Size x:Key="ShapeSize">60.0736196319018,74.7975460122699</av:Size>
               <av:PointCollection x:Key="ConnectorLocation">90.0368098159509,60 140.036809815951,60</av:PointCollection>
+              <x:Double x:Key="Height">898.65030674846628</x:Double>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Flowchart.StartNode>
-            <x:Reference>__ReferenceID4</x:Reference>
+            <x:Reference>__ReferenceID5</x:Reference>
           </Flowchart.StartNode>
-          <FlowStep x:Name="__ReferenceID4">
+          <FlowStep x:Name="__ReferenceID5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">140.036809815951,27.3128834355828</av:Point>
@@ -501,9 +503,10 @@
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">140.036809815951,268.061349693251</av:Point>
                                 <av:Size x:Key="ShapeSize">200.245398773006,65.3742331288343</av:Size>
+                                <av:PointCollection x:Key="ConnectorLocation">340.282208588957,300.748466257668 370.282208588957,300.748466257668 370.282208588957,300.805582822085 390.282208588957,300.805582822085</av:PointCollection>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Sequence DisplayName="Select System &amp; Activity" sap:VirtualizedContainerService.HintSize="376.343558282209,2488.93251533742" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                            <Sequence DisplayName="Select System &amp; Activity" sap:VirtualizedContainerService.HintSize="200.245398773006,65.3742331288343" sap2010:WorkflowViewState.IdRef="Sequence_11">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:Double" Name="delayBeforeSelectItem" />
                               </Sequence.Variables>
@@ -581,6 +584,75 @@
                                 </uix:NClick.Target>
                               </uix:NClick>
                             </Sequence>
+                            <FlowStep.Next>
+                              <FlowStep x:Name="__ReferenceID4">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">390.282208588957,268.118466257668</av:Point>
+                                    <av:Size x:Key="ShapeSize">200.245398773006,65.3742331288343</av:Size>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Sequence DisplayName="Upload Files" sap:VirtualizedContainerService.HintSize="510.625766871166,1183.21472392638" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NClick sap2010:Annotation.AnnotationText="Using for scroll down the page because the below activity &#xA;have some image activity." ClickType="Single" DisplayName="Click Contact Point" sap:VirtualizedContainerService.HintSize="468.220858895705,197.300613496932" sap2010:WorkflowViewState.IdRef="NClick_29" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9886ff5e-065b-4d03-aec0-c857d1e14aa6" Timeout="[in_timeout]" Version="V1">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://troubleticket.ais.co.th/TTSWeb/Action/PortalServlet" DesignTimeRectangle="466, 1314, 130, 73" FriendlyName="'Contact Point'" FullSelectorArgument="&lt;webctrl name='home' tag='FRAME' /&gt;&lt;webctrl src='/TTSWeb/Action/PortalServlet?target=NewsAction_listPrivateNews&amp;amp;a*' tag='FRAME' /&gt;&lt;webctrl parentid='bodyContactPoint' tag='SPAN' innertext='Contact Point*' /&gt;" FuzzySelectorArgument="&lt;webctrl name='home' tag='FRAME' /&gt;&lt;webctrl src='/TTSWeb/Action/PortalServlet?target=NewsAction_listPrivateNews&amp;amp;a*' tag='FRAME' /&gt;&lt;webctrl parentid='bodyContactPoint' tag='SPAN' type='' aaname='Contact Point : &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' check:text='Contact Point :' /&gt;" Guid="c5eb4425-e0cb-46a1-91b7-8427ec971bcb" ImageBase64="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" InformativeScreenshot="c36c79a6df918c843c043089f3ec1772.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Trouble Ticket System Fifth Edition (Version 5.00)' /&gt;" SearchSteps="FuzzySelector, Image" />
+                                    </uix:NClick.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NClick>
+                                  <ui:ForEachFolderX DisplayName="For Each Folder in Folder" Folder="[&quot;D:\RPA\DeploySap\CSS_erpa\@TransportRequest\@Number Request\&quot; + Now.ToString(&quot;yyyyMM\\yyyyMMdd&quot;) + &quot;\&quot; + in_currentRound.Replace(&quot;:&quot;, &quot;&quot;) + &quot;\&quot;]" sap:VirtualizedContainerService.HintSize="468.220858895705,853.398773006135" sap2010:WorkflowViewState.IdRef="ForEachFolderX_2" IncludeSubFolders="False" OrderBy="NameAscFirst">
+                                    <ui:ForEachFolderX.Body>
+                                      <ActivityAction x:TypeArguments="si:DirectoryInfo, x:Int32">
+                                        <ActivityAction.Argument1>
+                                          <DelegateInArgument x:TypeArguments="si:DirectoryInfo" Name="currDir" />
+                                        </ActivityAction.Argument1>
+                                        <ActivityAction.Argument2>
+                                          <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                                        </ActivityAction.Argument2>
+                                        <ui:ForEachFileX DisplayName="For Each File in Folder" Filter="*.7z" Folder="[currDir.ToString]" sap:VirtualizedContainerService.HintSize="434.061349693252,626.650306748466" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="False" OrderBy="NameAscFirst">
+                                          <ui:ForEachFileX.Body>
+                                            <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+                                              <ActivityAction.Argument1>
+                                                <DelegateInArgument x:TypeArguments="si:FileInfo" Name="currFile" />
+                                              </ActivityAction.Argument1>
+                                              <ActivityAction.Argument2>
+                                                <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                                              </ActivityAction.Argument2>
+                                              <Sequence DisplayName="Upload File" sap:VirtualizedContainerService.HintSize="376.343558282209,399.901840490798" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <uix:NClick ClickType="Single" DisplayName="Click Select File" sap:VirtualizedContainerService.HintSize="333.938650306748,155.484662576687" sap2010:WorkflowViewState.IdRef="NClick_28" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9886ff5e-065b-4d03-aec0-c857d1e14aa6" Timeout="[in_timeout]" Version="V1">
+                                                  <uix:NClick.Target>
+                                                    <uix:TargetAnchorable BrowserURL="https://troubleticket.ais.co.th/TTSWeb/TTSPortal.jsp" DesignTimeRectangle="578, 488, 127, 34" FriendlyName="'firefox.exe Trouble'" Guid="2c6c1976-0b5b-4539-ade7-3af63d93552d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH8AAAAiCAYAAAB2rQY6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAGREAABkRAZCHpWgAAATzSURBVHhe7Znda5xFFMbzj3jvP+CdCN4I3onihXghiBeCN6J4ISgIol4IFUVQqKJeFKliobYVq1VMiaYp+Wi+mo/mo93m+2uzm2y3SdpM/Q08y+zs7O7bNLvGzhx42J0zZzZzznPeM+eddBy70GES4kQiP2Ik8iNGIj9iJPIjRiI/YiTyI0Ym8n/qf8osF/vM3t2ykdzey5uxxRPmeNcjwTVZsb2zaBGaO0wM5D4zPbMfBud89Mx+YHbvbFs/9/fvmMGbX9jvS8Xeig3fEXfd/w1Nyf97+h0bAKRYzpmFzW4LBWfr9pw5cfmx4NosaAf5vTc+tnvlMzTv4tTA09Zf/BueP276c5+aX0dfsuujI7+8u26D8dvVV2rmrq+ftwGYy3fWzGXFUSOfZEemVk8H54WHnvxQxrug5HMUkBwHLf9HjXzZXls5FZwXoiF/ozQRnAcrxQGbAOeGX6jSd029bY8JSXl3zfTlPqmyASHyv+1+1OQ2/qz0GHf3d23PcbL3iSq7kC2fjJWMIskV/PJ/B7APX0iC+yn79Bb4KiEGF6+9VWPnx4djxt13O5Cp7CPr22Omc/KNTJubWP7BrtnZKxiaQs7O0s6S1flPlE8+BLMOgXDOXIKic9hNAL6r95DtytYVO86XJq1N5+Sb5sb671bHJzb1epRLM+9XbJeL/db2/NWXM5O/WLhkdfiKz/guX9yqQ+OJyI6/UyjPWt3a9mjVb7YSTcnnrOfJk0BCaWfZknhm6Lka+9ODz1gbCPUThSqB/DH+WkXnk0//gPhVgn0ga1vDFd18vsvqfFv1It0z79nxg5b9LOSrV8BH6QAxwD9ioqRTHPz4QDzJ8mPfk1X6VqEp+YDSSjD0lLlC9p4der5iix0SCvRfE6/bOciRziWfYChxNO+C4CAKYj1byCJhZ1bP2nE7yNcYW+mEwbkv7RyfjEU+pd+3bScyke/iZO/j5vLsR5YIVQSSQoQoCONL39ty5mJk/ms755Y2l3wFmRLorwUbpXE7TxKFCKmHdpCPD0ho39OrZ+yckl5lH6FHWdj859/K8W6mI/Uwcd/ku6Ai8J6PjC58Z3UKQiNxn1aXfAW+mWB31MjPIu76C2OvmvytKVu9JHx3/26r0ZD8xUKP3RQXH6F5oFIux1TSGq1x4ZKvcz3LvcFRI58+iKdY46zgaaeRpqlVJb1y8/Og7WGjIfkza+fsZuhaQ/OApgrRpYiarVCgSRQcpKOWziWfowPR2Icaop+Hnm3YH2iOjp1xO8hXP4KtdAJnPYkxsvCNHXM1vnlrusYu9LdbiYbkq3MHoeaEO3+VfTmtQEEKx4JsIQSHEXXhwCUfKKi8L0sHlGSF8vWKTt2+T6oaLCWtghq6Z/BxUPK1jsrnnt3EQI0y8UTHGwvi35oOz39l9TpCW42mZz5OQT6CEzxN3O1zQSG9v1kCh4Te890AAp/80Lu73vOBGzDZoscGW9YgJKVI0NGEDpt67/ngoOS7utB7vvt7+MCeqYLoXR/xx00eYoO4FUV7DMUScW0bIVPDxxPO5uQIQhmj1P0y8mJwTegGK3R8+OQD/9aOoNAcua+Uri3dsmz5ZK0bQKDgIo3+u/cg5AP/hq/ezSZxcx8g7dutluA/Jz/h4UQiP2Ik8iNGIj9iJPIjRiI/YiTyI0YiP2Ik8iNGIj9iJPIjRiI/WnSYe3AJF9HMzV1GAAAAAElFTkSuQmCC" InformativeScreenshot="3450e16a2959fd12e016190f74340a12.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Trouble Ticket System Fifth Edition (Version 5.00)' /&gt;" SearchSteps="Image" TargetType="ImageBased" />
+                                                  </uix:NClick.Target>
+                                                </uix:NClick>
+                                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Upload_File" sap:VirtualizedContainerService.HintSize="333.938650306748,111.901840490798" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Invokes\Upload_File.xaml">
+                                                  <ui:InvokeWorkflowFile.Arguments>
+                                                    <InArgument x:TypeArguments="x:Int32" x:Key="in_timeout">[in_timeout]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_filename">[currFile.ToString]</InArgument>
+                                                  </ui:InvokeWorkflowFile.Arguments>
+                                                </ui:InvokeWorkflowFile>
+                                              </Sequence>
+                                            </ActivityAction>
+                                          </ui:ForEachFileX.Body>
+                                        </ui:ForEachFileX>
+                                      </ActivityAction>
+                                    </ui:ForEachFolderX.Body>
+                                  </ui:ForEachFolderX>
+                                </Sequence>
+                              </FlowStep>
+                            </FlowStep.Next>
                           </FlowStep>
                         </FlowStep.Next>
                       </FlowStep>
@@ -594,6 +666,7 @@
           <x:Reference>__ReferenceID1</x:Reference>
           <x:Reference>__ReferenceID2</x:Reference>
           <x:Reference>__ReferenceID3</x:Reference>
+          <x:Reference>__ReferenceID4</x:Reference>
         </Flowchart>
       </ActivityAction>
     </uix:NApplicationCard.Body>
