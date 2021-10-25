@@ -3,14 +3,15 @@
     <x:Property Name="in_timeout" Type="InArgument(x:Int32)" />
     <x:Property Name="in_currentRound" Type="InArgument(x:String)" />
     <x:Property Name="in_inputTable" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_contactPoint" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>792.736196319018,1215.01840490798</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>749.153374233129,1215.01840490798</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Login_TTS_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="72">
+    <scg:List x:TypeArguments="x:String" Capacity="37">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -87,27 +88,28 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="Never" DisplayName="Use Browser Firefox" sap:VirtualizedContainerService.HintSize="668.466257668712,1150.23312883436" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="9886ff5e-065b-4d03-aec0-c857d1e14aa6" Version="V1">
+  <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="Never" DisplayName="Use Browser Firefox" sap:VirtualizedContainerService.HintSize="669.055214723926,1150.23312883436" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="9886ff5e-065b-4d03-aec0-c857d1e14aa6" Version="V1">
     <uix:NApplicationCard.Body>
       <ActivityAction x:TypeArguments="x:Object">
         <ActivityAction.Argument>
           <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
         </ActivityAction.Argument>
-        <Flowchart DisplayName="Use Browser Do" sap:VirtualizedContainerService.HintSize="634.306748466258,934.674846625767" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+        <Flowchart DisplayName="Use Browser Do" sap:VirtualizedContainerService.HintSize="634.895705521472,934.674846625767" sap2010:WorkflowViewState.IdRef="Flowchart_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
               <av:Point x:Key="ShapeLocation">29.9631901840491,22.601226993865</av:Point>
               <av:Size x:Key="ShapeSize">60.0736196319018,74.7975460122699</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">90.0368098159509,60 140.036809815951,60</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">60,97.3987730061349 60,416.17981595092 390.282208588957,416.17981595092</av:PointCollection>
               <x:Double x:Key="Height">898.65030674846628</x:Double>
+              <x:Double x:Key="Width">600.52760736196319</x:Double>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Flowchart.StartNode>
             <x:Reference>__ReferenceID5</x:Reference>
           </Flowchart.StartNode>
-          <FlowStep x:Name="__ReferenceID5">
+          <FlowStep>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">140.036809815951,27.3128834355828</av:Point>
@@ -359,7 +361,7 @@
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">140.036809815951,142.687116564417</av:Point>
                             <av:Size x:Key="ShapeSize">200.245398773006,65.3742331288343</av:Size>
-                            <av:PointCollection x:Key="ConnectorLocation">240.159509202454,208.061349693251 240.159509202454,268.061349693251</av:PointCollection>
+                            <av:PointCollection x:Key="ConnectorLocation">240.159509202454,208.061349693251 240.159509202454,258.061349693251</av:PointCollection>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <Sequence DisplayName="Select Date" sap:VirtualizedContainerService.HintSize="200.245398773006,65.3742331288343" sap2010:WorkflowViewState.IdRef="Sequence_9">
@@ -501,9 +503,9 @@
                           <FlowStep x:Name="__ReferenceID3">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <av:Point x:Key="ShapeLocation">140.036809815951,268.061349693251</av:Point>
+                                <av:Point x:Key="ShapeLocation">140.036809815951,258.061349693251</av:Point>
                                 <av:Size x:Key="ShapeSize">200.245398773006,65.3742331288343</av:Size>
-                                <av:PointCollection x:Key="ConnectorLocation">340.282208588957,300.748466257668 370.282208588957,300.748466257668 370.282208588957,300.805582822085 390.282208588957,300.805582822085</av:PointCollection>
+                                <av:PointCollection x:Key="ConnectorLocation">340.282208588957,290.748466257669 370.282208588957,290.748466257669 370.282208588957,290.805582822085 390.282208588957,290.805582822085</av:PointCollection>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <Sequence DisplayName="Select System &amp; Activity" sap:VirtualizedContainerService.HintSize="200.245398773006,65.3742331288343" sap2010:WorkflowViewState.IdRef="Sequence_11">
@@ -588,11 +590,12 @@
                               <FlowStep x:Name="__ReferenceID4">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <av:Point x:Key="ShapeLocation">390.282208588957,268.118466257668</av:Point>
+                                    <av:Point x:Key="ShapeLocation">390.282208588957,258.118466257668</av:Point>
                                     <av:Size x:Key="ShapeSize">200.245398773006,65.3742331288343</av:Size>
+                                    <av:PointCollection x:Key="ConnectorLocation">490.40490797546,323.492699386502 490.40490797546,383.492699386502</av:PointCollection>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Sequence DisplayName="Upload Files" sap:VirtualizedContainerService.HintSize="510.625766871166,1183.21472392638" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                <Sequence DisplayName="Upload Files" sap:VirtualizedContainerService.HintSize="200.245398773006,65.3742331288343" sap2010:WorkflowViewState.IdRef="Sequence_14">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -637,7 +640,7 @@
                                                     <uix:TargetAnchorable BrowserURL="https://troubleticket.ais.co.th/TTSWeb/TTSPortal.jsp" DesignTimeRectangle="578, 488, 127, 34" FriendlyName="'firefox.exe Trouble'" Guid="2c6c1976-0b5b-4539-ade7-3af63d93552d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH8AAAAiCAYAAAB2rQY6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAGREAABkRAZCHpWgAAATzSURBVHhe7Znda5xFFMbzj3jvP+CdCN4I3onihXghiBeCN6J4ISgIol4IFUVQqKJeFKliobYVq1VMiaYp+Wi+mo/mo93m+2uzm2y3SdpM/Q08y+zs7O7bNLvGzhx42J0zZzZzznPeM+eddBy70GES4kQiP2Ik8iNGIj9iJPIjRiI/YiTyI0Ym8n/qf8osF/vM3t2ykdzey5uxxRPmeNcjwTVZsb2zaBGaO0wM5D4zPbMfBud89Mx+YHbvbFs/9/fvmMGbX9jvS8Xeig3fEXfd/w1Nyf97+h0bAKRYzpmFzW4LBWfr9pw5cfmx4NosaAf5vTc+tnvlMzTv4tTA09Zf/BueP276c5+aX0dfsuujI7+8u26D8dvVV2rmrq+ftwGYy3fWzGXFUSOfZEemVk8H54WHnvxQxrug5HMUkBwHLf9HjXzZXls5FZwXoiF/ozQRnAcrxQGbAOeGX6jSd029bY8JSXl3zfTlPqmyASHyv+1+1OQ2/qz0GHf3d23PcbL3iSq7kC2fjJWMIskV/PJ/B7APX0iC+yn79Bb4KiEGF6+9VWPnx4djxt13O5Cp7CPr22Omc/KNTJubWP7BrtnZKxiaQs7O0s6S1flPlE8+BLMOgXDOXIKic9hNAL6r95DtytYVO86XJq1N5+Sb5sb671bHJzb1epRLM+9XbJeL/db2/NWXM5O/WLhkdfiKz/guX9yqQ+OJyI6/UyjPWt3a9mjVb7YSTcnnrOfJk0BCaWfZknhm6Lka+9ODz1gbCPUThSqB/DH+WkXnk0//gPhVgn0ga1vDFd18vsvqfFv1It0z79nxg5b9LOSrV8BH6QAxwD9ioqRTHPz4QDzJ8mPfk1X6VqEp+YDSSjD0lLlC9p4der5iix0SCvRfE6/bOciRziWfYChxNO+C4CAKYj1byCJhZ1bP2nE7yNcYW+mEwbkv7RyfjEU+pd+3bScyke/iZO/j5vLsR5YIVQSSQoQoCONL39ty5mJk/ms755Y2l3wFmRLorwUbpXE7TxKFCKmHdpCPD0ho39OrZ+yckl5lH6FHWdj859/K8W6mI/Uwcd/ku6Ai8J6PjC58Z3UKQiNxn1aXfAW+mWB31MjPIu76C2OvmvytKVu9JHx3/26r0ZD8xUKP3RQXH6F5oFIux1TSGq1x4ZKvcz3LvcFRI58+iKdY46zgaaeRpqlVJb1y8/Og7WGjIfkza+fsZuhaQ/OApgrRpYiarVCgSRQcpKOWziWfowPR2Icaop+Hnm3YH2iOjp1xO8hXP4KtdAJnPYkxsvCNHXM1vnlrusYu9LdbiYbkq3MHoeaEO3+VfTmtQEEKx4JsIQSHEXXhwCUfKKi8L0sHlGSF8vWKTt2+T6oaLCWtghq6Z/BxUPK1jsrnnt3EQI0y8UTHGwvi35oOz39l9TpCW42mZz5OQT6CEzxN3O1zQSG9v1kCh4Te890AAp/80Lu73vOBGzDZoscGW9YgJKVI0NGEDpt67/ngoOS7utB7vvt7+MCeqYLoXR/xx00eYoO4FUV7DMUScW0bIVPDxxPO5uQIQhmj1P0y8mJwTegGK3R8+OQD/9aOoNAcua+Uri3dsmz5ZK0bQKDgIo3+u/cg5AP/hq/ezSZxcx8g7dutluA/Jz/h4UQiP2Ik8iNGIj9iJPIjRiI/YiTyI0YiP2Ik8iNGIj9iJPIjRiI/WnSYe3AJF9HMzV1GAAAAAElFTkSuQmCC" InformativeScreenshot="3450e16a2959fd12e016190f74340a12.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Trouble Ticket System Fifth Edition (Version 5.00)' /&gt;" SearchSteps="Image" TargetType="ImageBased" />
                                                   </uix:NClick.Target>
                                                 </uix:NClick>
-                                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Upload_File" sap:VirtualizedContainerService.HintSize="333.938650306748,111.901840490798" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Invokes\Upload_File.xaml">
+                                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Upload_File_Popup" sap:VirtualizedContainerService.HintSize="333.938650306748,111.901840490798" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Invokes\Upload_File_Popup.xaml">
                                                   <ui:InvokeWorkflowFile.Arguments>
                                                     <InArgument x:TypeArguments="x:Int32" x:Key="in_timeout">[in_timeout]</InArgument>
                                                     <InArgument x:TypeArguments="x:String" x:Key="in_filename">[currFile.ToString]</InArgument>
@@ -651,6 +654,110 @@
                                     </ui:ForEachFolderX.Body>
                                   </ui:ForEachFolderX>
                                 </Sequence>
+                                <FlowStep.Next>
+                                  <FlowStep x:Name="__ReferenceID5">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <av:Point x:Key="ShapeLocation">390.282208588957,383.492699386502</av:Point>
+                                        <av:Size x:Key="ShapeSize">200.245398773006,65.3742331288343</av:Size>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Sequence DisplayName="Contact Point" sap:VirtualizedContainerService.HintSize="418.748466257669,1627.28834355828" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="x:Int32" Name="newRow" />
+                                      </Sequence.Variables>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Contact Point" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="376.343558282209,214.380368098159" sap2010:WorkflowViewState.IdRef="NTypeInto_12" ScopeIdentifier="9886ff5e-065b-4d03-aec0-c857d1e14aa6" Text="[in_contactPoint]" Timeout="[in_timeout]" Version="V1">
+                                        <uix:NTypeInto.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://troubleticket.ais.co.th/TTSWeb/Action/PortalServlet" DesignTimeRectangle="626, 589, 1188, 101" ElementType="InputBox" FriendlyName="'TEXTAREA txtaContactPoi…'" FullSelectorArgument="&lt;webctrl name='home' tag='FRAME' /&gt;&lt;webctrl src='/TTSWeb/Action/PortalServlet?target=NewsAction_listPrivateNews&amp;amp;a*' tag='FRAME' /&gt;&lt;webctrl id='txtaContactPoint_ContactPoint' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl name='home' tag='FRAME' /&gt;&lt;webctrl src='/TTSWeb/Action/PortalServlet?target=NewsAction_listPrivateNews&amp;amp;a*' tag='FRAME' /&gt;&lt;webctrl id='txtaContactPoint_ContactPoint' tag='TEXTAREA' type='' aaname='' /&gt;" Guid="7cacd19a-099b-4071-86da-598c2d8fea84" ImageBase64="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" InformativeScreenshot="dc8ff68f6247dec1a682d1fc51b471a2.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Trouble Ticket System Fifth Edition (Version 5.00)' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                        </uix:NTypeInto.Target>
+                                      </uix:NTypeInto>
+                                      <uix:NClick ClickType="Single" DisplayName="Click Add (Responsibility)" sap:VirtualizedContainerService.HintSize="376.343558282209,155.484662576687" sap2010:WorkflowViewState.IdRef="NClick_30" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9886ff5e-065b-4d03-aec0-c857d1e14aa6" Timeout="[in_timeout]" Version="V1">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://troubleticket.ais.co.th/TTSWeb/Action/PortalServlet" DesignTimeRectangle="637, 708, 120, 43" ElementType="Button" FriendlyName="'ADD'" FullSelectorArgument="&lt;webctrl name='home' tag='FRAME' /&gt;&lt;webctrl src='/TTSWeb/Action/PortalServlet?target=NewsAction_listPrivateNews&amp;amp;a*' tag='FRAME' /&gt;&lt;webctrl id='btnContactPoint_Responsibility' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl name='home' tag='FRAME' /&gt;&lt;webctrl src='/TTSWeb/Action/PortalServlet?target=NewsAction_listPrivateNews&amp;amp;a*' tag='FRAME' /&gt;&lt;webctrl id='btnContactPoint_Responsibility' tag='BUTTON' type='' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;ADD &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' check:text='ADD' /&gt;" Guid="14b85a11-1354-42d7-a9bb-03bb36c91641" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHwAAAAvCAYAAAAhBK7nAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAGREAABkRAZCHpWgAAAQ5SURBVHhe7ZrLTxNBAMb5R7x7N/4LJsaLdw8mxsSDFxPjwUQTL+rBRKPxYKIHNeFiIoaDRAwqGBAhPIOAyKNQHhUslBZCoQXGfGO/dXY7S6evJenML/li2Z2dhfntPHZqk3BYhSf8YUeTSwOHOOGWhDjhloQ44ZaEOOGWhDjhloQ44ZaEOOGWhDjhloQ44ZaEOOGWhDjhloQ44ZaEHJvwl70nRX/svljZ7BWZbFykdmbE4sYX0TN7WzzvPqG9xqXykMiFQ+b0Wos4PNwv3LmYg8OcGI4/0V5fi3z6ebVwJyE/68ogvzMDhVLF7OXTIr7xWbwdOlN0Hf6+MHL722I1Myjaflwouq6eIZEKR6/OZBcKdyxNIv29Lr19fr1d5A+y8h7LqW5tGYTCUzvTciRSA3EAD+fHicu+6yh8a3ep6LpsLinP4YEfWHjgu66eIZEJhzg0gI7dfEr2GB2Qrquv0uD3gOzk9rjY3JmVn8MeKgoPEzO69Eyeh/zm/tPecQrHv2p55uv0DSkc+TB+UVum1iGRCZ9afVO4k5+ZP61embXMcOGon57ZW766qknv3B1Z52SiWYyvvJKfRxafasuWEo5gtABzyffesVLCET4sya0x7flah0QinL1Kh9ooYXNmOjvvq6+aoIEBelbL8Fn5Oax+E+Gto+dlme29hHfMRDjbBL08bISpZUgkwtFgYZgIB7UY+jDsooFVwRjWw+o3EY7s5jdlOQ7rJsIRTCugc+qa9nwtQyIRzmGPYDgdij+WaZ+45JXr+nXdO7640Vko/Y/B+CNfnZWEwyjuHzymDsmMqXD0bsCHxlS4af21CIlEuNpz1aHvqKDxVEo1nknQswGGYR5DrwS6xZupEK49yhWO9QtoaOEY/nRlggkKx6JPV840nGt18zXn9WDDux5eYdgABK9geBVDJhKvvXLYaeNxvueSvtg9X53lBkN2KYIrZlMhnMM5QpgK5xwefI+vR0gkwvFaFYbaKOpIEER9z60k2dy6rCe4EcLwLUId7k2EcySqZJXOd/GGW6UjbPAgJsJxXK2r3GAVDNCjdOcR7LgBdfFmInwp1SXLqAtBE+HcAzhqp6+WIZEJx5CsA8P4u5FzMpwLVdAD1F5XSSgzbIMF4f46HkweKyV8bPmFPI/pR+2lpYR3z9z0ene1f5tpSGTCETZEOVS7oIEIbnCUmhY4CmE3Dj9TeHAvfTUzVPFeOreQ8ftU+7eVExKpcMRk8QTQIH2xu9o6ygl6NTCZFjAsAy7eKFwHFpaxZJv8QihYz1EPNoSvbH7TfstWz5DIhSP4ajCdjRXu7Aei8fVh1A3S6CHHIpxp7jsl/8MDd9c6Jq9oe4xL9SHHKtwluhAn3JIQJ9ySECfckhAn3JIQJ9ySECfckhAn3JIQJ9ySECfckhAn3JIQJ9ySECfckpD/nxxW4IRbhRB/AYMMo2rQxtcYAAAAAElFTkSuQmCC" InformativeScreenshot="d727f44cab0da50c893f00494e82fa10.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Trouble Ticket System Fifth Edition (Version 5.00)' /&gt;" SearchSteps="FuzzySelector, Image">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                <uix:Target DesignTimeRectangle="691, 719, 42, 22" ElementType="Text" FriendlyName="'ADD'" FullSelectorArgument="&lt;webctrl name='home' tag='FRAME' /&gt;&lt;webctrl src='/TTSWeb/Action/PortalServlet?target=NewsAction_listPrivateNews&amp;amp;a*' tag='FRAME' /&gt;&lt;webctrl aaname='ADD' parentid='btnContactPoint_Responsibility' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl name='home' tag='FRAME' /&gt;&lt;webctrl src='/TTSWeb/Action/PortalServlet?target=NewsAction_listPrivateNews&amp;amp;a*' tag='FRAME' /&gt;&lt;webctrl aaname='ADD' parentid='btnContactPoint_Responsibility' tag='SPAN' type='' check:text='ADD' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC4AAAAaCAYAAADIUm6MAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAGREAABkRAZCHpWgAAAJaSURBVFhH7ZY7SwNBEMfzRez9An4Fwc7ewsbOxsbCzl6wshC00MJSIYVBRUUlGBBNFI0PEuMrDxMv5mEwMa+V/5I59u7mvNUiqGTgj+fe7Oa3M7M365vd9om/qB54t/U/wXeuxwUZnjkf6Ll83PFy2kejJB5fd8VqeNAxL5Zb63g5rd6siGz5RAQuRhzzoC/B7/ObotGqyoVShSDrAxF44T0m0sWQRQCAtdp1sXU5ZplH4G+1pGNetW7Id+12Uxw/zFjmQa7gC8E+CW1UoqL4fiufMcb5Ejj3A9BZcl6+xyZWjgbMcQLHX9WfdBCblODQRnTU8s4VPJSYloteZVZENL0sn0+f5lhfL3AI2YMljHVzzAscok0bb+eWcVdwOMKw07XIkHwuVe9ZXx1w/9mw9Kl8ZMwxHXDKPKKuZpwFRzrhqIKiXGD2lEE64FCtUZR+VC464BDKFbZ3M2GOseCUHpSJfUxNNUkXHNGG0eZ1wbn1WXBEGob00hiiBOMOqS54rhyRft8Fj7/4pd+X4FSLXD1T3dsBf0XEUQpeZj/huuBU45QxXXCqcbUPOMCr9bx0sjcEEjUktYx0wBFl2E++KvQtd/2q4NTCsEN1XBU6KEw9pDrgycK+9FEPvA449RB757aAE5Rbo4Ho/oLM0JgX+HlqUb5H51Sj5gUejE+Z0VYzDJngWJA+9Gpb5kTlhO6K/wncflfJlsM/vqvgcgYDDxcQExxRhgFCdeCEdMPokBI4Z7VGQdwZAbEU6nesQ+CcATxdPGRvlZDjcP4V9cC7rR54t9UD76584hMCAFWbbcUyJwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                      <Delay DisplayName=" Delay 1 second" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="376.343558282209,21.7914110429448" sap2010:WorkflowViewState.IdRef="Delay_6" />
+                                      <uix:NClick ClickType="Single" DisplayName="Click Add (Stand By)" sap:VirtualizedContainerService.HintSize="376.343558282209,155.484662576687" sap2010:WorkflowViewState.IdRef="NClick_31" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9886ff5e-065b-4d03-aec0-c857d1e14aa6" Timeout="[in_timeout]" Version="V1">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://troubleticket.ais.co.th/TTSWeb/Action/PortalServlet" DesignTimeRectangle="637, 853, 120, 43" ElementType="Button" FriendlyName="'ADD'" FullSelectorArgument="&lt;webctrl name='home' tag='FRAME' /&gt;&lt;webctrl src='/TTSWeb/Action/PortalServlet?target=NewsAction_listPrivateNews&amp;amp;a*' tag='FRAME' /&gt;&lt;webctrl id='btnContactPoint_StandBy' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl name='home' tag='FRAME' /&gt;&lt;webctrl src='/TTSWeb/Action/PortalServlet?target=NewsAction_listPrivateNews&amp;amp;a*' tag='FRAME' /&gt;&lt;webctrl id='btnContactPoint_StandBy' tag='BUTTON' type='' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;ADD &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' check:text='ADD' /&gt;" Guid="500e71d8-85c1-4ff2-a65a-da5adad1cf0b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHwAAAAvCAYAAAAhBK7nAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAGREAABkRAZCHpWgAAAQ4SURBVHhe7ZrLTxNBAMb5R7x7N/4LJsaLdw8mxsSDFxPjwUQTL+rBRKPxYKIHNeFiIoaDRAwqGBAhPIOAyKNQHhUslBZCoQXGfGO/dXY7S6evJenML/li2Z2dhfntPHZqk3BYhSf8YUeTSwOHOOGWhDjhloQ44ZaEOOGWhDjhloQ44ZaEOOGWhDjhloQ44ZaEOOGWhDjhloQcm/CXvSdFf+y+WNnsFZlsXKR2ZsTixhfRM3tbPO8+ob3GpfKQyIVD5vRaizg83C/cuZiDw5wYjj/RXl+LfPp5tXAnIT/ryiC/MwOFUsXs5dMivvFZvB06U3Qd/r4wcvvbYjUzKNp+XCi6rp4hkQpHr85kFwp3LE0i/b0uvX1+vV3kD7LyHsupbm0ZhMJTO9NyJFIDcQAP58eJy77rKHxrd6noumwuKc/hgR9YeOC7rp4hkQmHODSAjt18SvYYHZCuq6/S4PeA7OT2uNjcmZWfwx4qCg8TM7r0TJ6H/Ob+095xCse/annm6/QNKRz5MH5RW6bWIZEJn1p9U7iTn5k/rV6Ztcxw4aifntlbvrqqSe/cHVnnZKJZjK+8kp9HFp9qy5YSjmC0AHPJ996xUsIRPizJrTHt+VqHRCKcvUqH2ihhc2Y6O++rr5qggQF6VsvwWfk5rH4T4a2j52WZ7b2Ed8xEONsEvTxshKllSCTC0WBhmAgHtRj6MOyigVXBGNbD6jcRjuzmN2U5DusmwhFMK6Bz6pr2fC1DIhHOYY9gOB2KP5Zpn7jklev6dd07vrjRWSj9j8H4I1+dlYTDKO4fPKYOyYypcPRuwIfGVLhp/bUIiUS42nPVoe+ooPFUSjWeSdCzAYZhHkOvBLrFm6kQrj3KFY71C2ho4Rj+dGWCCQrHok9XzjSca3XzNef1YMO7Hl5h2AAEr2B4FUMmEq+9cthp43G+55K+2D1fneUGQ3YpgitmUyGcwzlCmArnHB58j69HSCTC8VoVhtoo6kgQRH3PrSTZ3LqsJ7gRwvAtQh3uTYRzJKpklc538YZbpSNs8CAmwnFcravcYBUM0KN05xHsuAF18WYifCnVJcuoC0ET4dwDOGqnr5YhkQnHkKwDw/i7kXMynAtV0APUXldJKDNsgwXh/joeTB4rJXxs+YU8j+lH7aWlhHfP3PR6d7V/m2lIZMIRNkQ5VLuggQhucJSaFjgKYTcOP1N4cC99NTNU8V46t5Dx+1T7t5UTEqlwxGTxBNAgfbG72jrKCXo1MJkWMCwDLt4oXAcWlrFkm/xCKFjPUQ82hK9sftN+y1bPkMiFI/hqMJ2NFe7sB6Lx9WHUDdLoIccinGnuOyX/wwN31zomr2h7jEv1Iccq3CW6ECfckhAn3JIQJ9ySECfckhAn3JIQJ9ySECfckhAn3JIQJ9ySECfckhAn3JIQJ9ySkP+fHFbghFuGE24VQvwFThdvYeAJiPQAAAAASUVORK5CYII=" InformativeScreenshot="d8a162a271ec0e85e1ce9fc51bca37bf.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Trouble Ticket System Fifth Edition (Version 5.00)' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                <uix:Target DesignTimeRectangle="691, 863, 42, 22" ElementType="Text" FriendlyName="'ADD'" FullSelectorArgument="&lt;webctrl name='home' tag='FRAME' /&gt;&lt;webctrl src='/TTSWeb/Action/PortalServlet?target=NewsAction_listPrivateNews&amp;amp;a*' tag='FRAME' /&gt;&lt;webctrl aaname='ADD' parentid='btnContactPoint_StandBy' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl name='home' tag='FRAME' /&gt;&lt;webctrl src='/TTSWeb/Action/PortalServlet?target=NewsAction_listPrivateNews&amp;amp;a*' tag='FRAME' /&gt;&lt;webctrl aaname='ADD' parentid='btnContactPoint_StandBy' tag='SPAN' type='' check:text='ADD' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC4AAAAaCAYAAADIUm6MAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAGREAABkRAZCHpWgAAAJaSURBVFhH7ZY7SwNBEMfzRez9An4Fwc7ewsbOxsbCzl6wshC00MJSIYVBRUUlGBBNFI0PEuMrDxMv5mEwMa+V/5I59u7mvNUiqGTgj+fe7Oa3M7M365vd9om/qB54t/U/wXeuxwUZnjkf6Ll83PFy2kejJB5fd8VqeNAxL5Zb63g5rd6siGz5RAQuRhzzoC/B7/ObotGqyoVShSDrAxF44T0m0sWQRQCAtdp1sXU5ZplH4G+1pGNetW7Id+12Uxw/zFjmQa7gC8E+CW1UoqL4fiufMcb5Ejj3A9BZcl6+xyZWjgbMcQLHX9WfdBCblODQRnTU8s4VPJSYloteZVZENL0sn0+f5lhfL3AI2YMljHVzzAscok0bb+eWcVdwOMKw07XIkHwuVe9ZXx1w/9mw9Kl8ZMwxHXDKPKKuZpwFRzrhqIKiXGD2lEE64FCtUZR+VC464BDKFbZ3M2GOseCUHpSJfUxNNUkXHNGG0eZ1wbn1WXBEGob00hiiBOMOqS54rhyRft8Fj7/4pd+X4FSLXD1T3dsBf0XEUQpeZj/huuBU45QxXXCqcbUPOMCr9bx0sjcEEjUktYx0wBFl2E++KvQtd/2q4NTCsEN1XBU6KEw9pDrgycK+9FEPvA449RB757aAE5Rbo4Ho/oLM0JgX+HlqUb5H51Sj5gUejE+Z0VYzDJngWJA+9Gpb5kTlhO6K/wncflfJlsM/vqvgcgYDDxcQExxRhgFCdeCEdMPokBI4Z7VGQdwZAbEU6nesQ+CcATxdPGRvlZDjcP4V9cC7rR54t9UD76584hMCAFWbbcUyJwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                      <Delay DisplayName=" Delay 1 second" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="376.343558282209,21.7914110429448" sap2010:WorkflowViewState.IdRef="Delay_5" />
+                                      <uix:NClick ClickType="Single" DisplayName="Click Add (Member List)" sap:VirtualizedContainerService.HintSize="376.343558282209,155.484662576687" sap2010:WorkflowViewState.IdRef="NClick_32" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9886ff5e-065b-4d03-aec0-c857d1e14aa6" Timeout="[in_timeout]" Version="V1">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://troubleticket.ais.co.th/TTSWeb/Action/PortalServlet" DesignTimeRectangle="637, 997, 120, 43" ElementType="Button" FriendlyName="'ADD'" FullSelectorArgument="&lt;webctrl name='home' tag='FRAME' /&gt;&lt;webctrl src='/TTSWeb/Action/PortalServlet?target=NewsAction_listPrivateNews&amp;amp;a*' tag='FRAME' /&gt;&lt;webctrl id='btnContactPoint_MemberList' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl name='home' tag='FRAME' /&gt;&lt;webctrl src='/TTSWeb/Action/PortalServlet?target=NewsAction_listPrivateNews&amp;amp;a*' tag='FRAME' /&gt;&lt;webctrl id='btnContactPoint_MemberList' tag='BUTTON' type='' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;ADD &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' check:text='ADD' /&gt;" Guid="83f9c662-c62f-496a-bf20-e9666f8e0ec2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHwAAAAvCAYAAAAhBK7nAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAGREAABkRAZCHpWgAAAQ4SURBVHhe7ZrLTxNBAMb5R7x7N/4LJsaLdw8mxsSDFxPjwUQTL+rBRKPxYKIHNeFiIoaDRAwqGBAhPIOAyKNQHhUslBZCoQXGfGO/dXY7S6evJenML/li2Z2dhfntPHZqk3BYhSf8YUeTSwOHOOGWhDjhloQ44ZaEOOGWhDjhloQ44ZaEOOGWhDjhloQ44ZaEOOGWhDjhloQ44ZaEHJvwl70nRX/svljZ7BWZbFykdmbE4sYX0TN7WzzvPqG9xqXykMiFQ+b0Wos4PNwv3LmYg8OcGI4/0V5fi3z6ebVwJyE/68ogvzMDhVLF7OXTIr7xWbwdOlN0Hf6+MHL722I1Myjaflwouq6eIZEKR6/OZBcKdyxNIv29Lr19fr1d5A+y8h7LqW5tGYTCUzvTciRSA3EAD+fHicu+6yh8a3ep6LpsLinP4YEfWHjgu66eIZEJhzg0gI7dfEr2GB2Qrquv0uD3gOzk9rjY3JmVn8MeKgoPEzO69Eyeh/zm/tPecQrHv2p55uv0DSkc+TB+UVum1iGRCZ9afVO4k5+ZP61embXMcOGon57ZW766qknv3B1Z52SiWYyvvJKfRxafasuWEo5gtABzyffesVLCET4sya0x7flah0QinL1Kh9ooYXNmOjvvq6+aoIEBelbL8Fn5Oax+E+Gto+dlme29hHfMRDjbBL08bISpZUgkwtFgYZgIB7UY+jDsooFVwRjWw+o3EY7s5jdlOQ7rJsIRTCugc+qa9nwtQyIRzmGPYDgdij+WaZ+45JXr+nXdO7640Vko/Y/B+CNfnZWEwyjuHzymDsmMqXD0bsCHxlS4af21CIlEuNpz1aHvqKDxVEo1nknQswGGYR5DrwS6xZupEK49yhWO9QtoaOEY/nRlggkKx6JPV840nGt18zXn9WDDux5eYdgABK9geBVDJhKvvXLYaeNxvueSvtg9X53lBkN2KYIrZlMhnMM5QpgK5xwefI+vR0gkwvFaFYbaKOpIEER9z60k2dy6rCe4EcLwLUId7k2EcySqZJXOd/GGW6UjbPAgJsJxXK2r3GAVDNCjdOcR7LgBdfFmInwp1SXLqAtBE+HcAzhqp6+WIZEJx5CsA8P4u5FzMpwLVdAD1F5XSSgzbIMF4f46HkweKyV8bPmFPI/pR+2lpYR3z9z0ene1f5tpSGTCETZEOVS7oIEIbnCUmhY4CmE3Dj9TeHAvfTUzVPFeOreQ8ftU+7eVExKpcMRk8QTQIH2xu9o6ygl6NTCZFjAsAy7eKFwHFpaxZJv8QihYz1EPNoSvbH7TfstWz5DIhSP4ajCdjRXu7Aei8fVh1A3S6CHHIpxp7jsl/8MDd9c6Jq9oe4xL9SHHKtwluhAn3JIQJ9ySECfckhAn3JIQJ9ySECfckhAn3JIQJ9ySECfckhAn3JIQJ9ySkP+fHFbghFuGE24VQvwFifZvYRCAvwUAAAAASUVORK5CYII=" InformativeScreenshot="6e84afae9729a4a890bed7b276c93797.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Trouble Ticket System Fifth Edition (Version 5.00)' /&gt;" SearchSteps="FuzzySelector, Image">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                <uix:Target DesignTimeRectangle="691, 1008, 42, 22" ElementType="Text" FriendlyName="'ADD'" FullSelectorArgument="&lt;webctrl name='home' tag='FRAME' /&gt;&lt;webctrl src='/TTSWeb/Action/PortalServlet?target=NewsAction_listPrivateNews&amp;amp;a*' tag='FRAME' /&gt;&lt;webctrl aaname='ADD' parentid='btnContactPoint_MemberList' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl name='home' tag='FRAME' /&gt;&lt;webctrl src='/TTSWeb/Action/PortalServlet?target=NewsAction_listPrivateNews&amp;amp;a*' tag='FRAME' /&gt;&lt;webctrl aaname='ADD' parentid='btnContactPoint_MemberList' tag='SPAN' type='' check:text='ADD' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC4AAAAaCAYAAADIUm6MAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAGREAABkRAZCHpWgAAAJaSURBVFhH7ZY7SwNBEMfzRez9An4Fwc7ewsbOxsbCzl6wshC00MJSIYVBRUUlGBBNFI0PEuMrDxMv5mEwMa+V/5I59u7mvNUiqGTgj+fe7Oa3M7M365vd9om/qB54t/U/wXeuxwUZnjkf6Ll83PFy2kejJB5fd8VqeNAxL5Zb63g5rd6siGz5RAQuRhzzoC/B7/ObotGqyoVShSDrAxF44T0m0sWQRQCAtdp1sXU5ZplH4G+1pGNetW7Id+12Uxw/zFjmQa7gC8E+CW1UoqL4fiufMcb5Ejj3A9BZcl6+xyZWjgbMcQLHX9WfdBCblODQRnTU8s4VPJSYloteZVZENL0sn0+f5lhfL3AI2YMljHVzzAscok0bb+eWcVdwOMKw07XIkHwuVe9ZXx1w/9mw9Kl8ZMwxHXDKPKKuZpwFRzrhqIKiXGD2lEE64FCtUZR+VC464BDKFbZ3M2GOseCUHpSJfUxNNUkXHNGG0eZ1wbn1WXBEGob00hiiBOMOqS54rhyRft8Fj7/4pd+X4FSLXD1T3dsBf0XEUQpeZj/huuBU45QxXXCqcbUPOMCr9bx0sjcEEjUktYx0wBFl2E++KvQtd/2q4NTCsEN1XBU6KEw9pDrgycK+9FEPvA449RB757aAE5Rbo4Ho/oLM0JgX+HlqUb5H51Sj5gUejE+Z0VYzDJngWJA+9Gpb5kTlhO6K/wncflfJlsM/vqvgcgYDDxcQExxRhgFCdeCEdMPokBI4Z7VGQdwZAbEU6nesQ+CcATxdPGRvlZDjcP4V9cC7rR54t9UD76584hMCAFWbbcUyJwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                      <Delay DisplayName=" Delay 1 second" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="376.343558282209,21.7914110429448" sap2010:WorkflowViewState.IdRef="Delay_7" />
+                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get_NewContactPointRow" sap:VirtualizedContainerService.HintSize="376.343558282209,111.901840490798" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Invokes\Get_NewContactPointRow.xaml">
+                                        <ui:InvokeWorkflowFile.Arguments>
+                                          <InArgument x:TypeArguments="x:Int32" x:Key="in_timeout">
+                                            <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="in_timeout" />
+                                          </InArgument>
+                                          <OutArgument x:TypeArguments="x:Int32" x:Key="out_newRow">
+                                            <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="newRow" />
+                                          </OutArgument>
+                                        </ui:InvokeWorkflowFile.Arguments>
+                                      </ui:InvokeWorkflowFile>
+                                      <Sequence DisplayName="Add Contact Points" sap:VirtualizedContainerService.HintSize="376.343558282209,356.319018404908" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Add ContactPoint (apo-sap@ais.co.th)" sap:VirtualizedContainerService.HintSize="333.938650306748,111.901840490798" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Invokes\Add_ContactPointData.xaml">
+                                          <ui:InvokeWorkflowFile.Arguments>
+                                            <InArgument x:TypeArguments="x:Int32" x:Key="in_timeout">
+                                              <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="in_timeout" />
+                                            </InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="in_whichRow">
+                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="newRow.ToString" />
+                                            </InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="in_fullName">
+                                              <Literal x:TypeArguments="x:String">apo-sap@ais.co.th</Literal>
+                                            </InArgument>
+                                          </ui:InvokeWorkflowFile.Arguments>
+                                        </ui:InvokeWorkflowFile>
+                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Add ContactPoint (bu-erpa@ais.co.th)" sap:VirtualizedContainerService.HintSize="333.938650306748,111.901840490798" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Invokes\Add_ContactPointData.xaml">
+                                          <ui:InvokeWorkflowFile.Arguments>
+                                            <InArgument x:TypeArguments="x:Int32" x:Key="in_timeout">
+                                              <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="in_timeout" />
+                                            </InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="in_whichRow">
+                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="(newRow + 1).ToString" />
+                                            </InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="in_fullName">
+                                              <Literal x:TypeArguments="x:String">bu-erpa@ais.co.th</Literal>
+                                            </InArgument>
+                                          </ui:InvokeWorkflowFile.Arguments>
+                                        </ui:InvokeWorkflowFile>
+                                      </Sequence>
+                                    </Sequence>
+                                  </FlowStep>
+                                </FlowStep.Next>
                               </FlowStep>
                             </FlowStep.Next>
                           </FlowStep>
@@ -667,6 +774,7 @@
           <x:Reference>__ReferenceID2</x:Reference>
           <x:Reference>__ReferenceID3</x:Reference>
           <x:Reference>__ReferenceID4</x:Reference>
+          <x:Reference>__ReferenceID5</x:Reference>
         </Flowchart>
       </ActivityAction>
     </uix:NApplicationCard.Body>

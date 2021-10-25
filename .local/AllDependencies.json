@@ -1201,7 +1201,7 @@
           "lib/net461/System.ValueTuple.dll": {}
         }
       },
-      "UiPath/21.10.29.32675": {
+      "UiPath/21.11.30.35388-preview": {
         "type": "package",
         "compile": {
           "lib/net45/_._": {}
@@ -1291,7 +1291,7 @@
           }
         }
       },
-      "UiPath.Excel.Activities/2.11.2-preview": {
+      "UiPath.Excel.Activities/2.11.3": {
         "type": "package",
         "dependencies": {
           "ClosedXML": "0.87.1",
@@ -1304,6 +1304,9 @@
           "lib/net461/_._": {}
         },
         "runtime": {
+          "lib/net461/Microsoft.Office.Interop.Excel.dll": {},
+          "lib/net461/Microsoft.Vbe.Interop.dll": {},
+          "lib/net461/Office.dll": {},
           "lib/net461/UiPath.Excel.Activities.Design.dll": {},
           "lib/net461/UiPath.Excel.Activities.Package.dll": {},
           "lib/net461/UiPath.Excel.Activities.dll": {},
@@ -1411,7 +1414,7 @@
           }
         }
       },
-      "UiPath.ImageProcessing/21.10.0": {
+      "UiPath.ImageProcessing/21.10.2": {
         "type": "package",
         "compile": {
           "lib/net461/_._": {}
@@ -1420,7 +1423,7 @@
           "lib/net461/UiPath.ImageProcessingInterop.dll": {}
         }
       },
-      "UiPath.Mail.Activities/1.12.0-preview": {
+      "UiPath.Mail.Activities/1.12.1": {
         "type": "package",
         "dependencies": {
           "Google.Apis.Calendar.v3": "1.43.0.1872",
@@ -1435,12 +1438,16 @@
           "System.ValueTuple": "4.5.0",
           "UiPath.Activities.RuntimeGovernance": "1.1.2",
           "UiPath.ConnectionClient": "1.0.0-20210921.1",
-          "UiPath.Platform": "21.10.0-beta.1879279"
+          "UiPath.Platform": "21.10.0"
         },
         "compile": {
           "lib/net461/_._": {}
         },
         "runtime": {
+          "lib/net461/Interop.Domino.UiPath.dll": {},
+          "lib/net461/Microsoft.Office.Interop.Outlook.dll": {},
+          "lib/net461/Microsoft.Office.Interop.Word.dll": {},
+          "lib/net461/Office.dll": {},
           "lib/net461/UiPath.Mail.Activities.Design.dll": {},
           "lib/net461/UiPath.Mail.Activities.Package.dll": {},
           "lib/net461/UiPath.Mail.Activities.dll": {},
@@ -1549,10 +1556,10 @@
           }
         }
       },
-      "UiPath.OCR.Activities/3.3.1-preview": {
+      "UiPath.OCR.Activities/3.3.2": {
         "type": "package",
         "dependencies": {
-          "UiPath.OCR.Contracts": "2.9.1-preview"
+          "UiPath.OCR.Contracts": "2.9.1"
         },
         "compile": {
           "lib/net461/_._": {}
@@ -1631,7 +1638,7 @@
           }
         }
       },
-      "UiPath.OCR.Contracts/2.9.1-preview": {
+      "UiPath.OCR.Contracts/2.9.1": {
         "type": "package",
         "frameworkAssemblies": [
           "System.Activities"
@@ -1660,7 +1667,7 @@
           "lib/net461/UiPath.Platform.dll": {}
         }
       },
-      "UiPath.System.Activities/21.10.0-preview": {
+      "UiPath.System.Activities/21.10.0": {
         "type": "package",
         "dependencies": {
           "CsvHelper": "16.0.0",
@@ -1675,7 +1682,7 @@
           "Newtonsoft.Json": "11.0.2",
           "SharpZipLib": "1.2.0",
           "System.Management.Automation": "6.1.7601.17515",
-          "UiPath.Platform": "21.10.0-preview",
+          "UiPath.Platform": "21.10.0",
           "UiPath.Telemetry.Client": "1.5.3"
         },
         "compile": {
@@ -1769,19 +1776,19 @@
           "lib/net461/TelemetryClient.dll": {}
         }
       },
-      "UiPath.UIAutomation.Activities/21.10.0-preview": {
+      "UiPath.UIAutomation.Activities/21.11.0-preview": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
           "System.IO.Abstractions": "3.0.10",
-          "UiPath": "[21.10.29.32675]",
+          "UiPath": "[21.11.30.35388-preview]",
           "UiPath.Activities.RuntimeGovernance": "1.1.2",
-          "UiPath.ImageProcessing": "21.10.0",
-          "UiPath.OCR.Activities": "3.3.1-preview",
-          "UiPath.OCR.Contracts": "2.9.1-preview",
+          "UiPath.ImageProcessing": "21.10.2",
+          "UiPath.OCR.Activities": "3.3.2",
+          "UiPath.OCR.Contracts": "2.9.1",
           "UiPath.Platform": "21.10.0",
           "UiPath.Telemetry.Client": "1.5.3",
-          "UiPath.Vision": "3.1.3-preview"
+          "UiPath.Vision": "3.1.4"
         },
         "compile": {
           "lib/net461/_._": {}
@@ -2065,10 +2072,10 @@
           }
         }
       },
-      "UiPath.Vision/3.1.3-preview": {
+      "UiPath.Vision/3.1.4": {
         "type": "package",
         "dependencies": {
-          "UiPath.OCR.Contracts": "2.9.1-preview"
+          "UiPath.OCR.Contracts": "2.9.1"
         },
         "compile": {
           "lib/net461/_._": {}
@@ -3268,7 +3275,7 @@
           "lib/net461/System.ValueTuple.dll": {}
         }
       },
-      "UiPath/21.10.29.32675": {
+      "UiPath/21.11.30.35388-preview": {
         "type": "package",
         "compile": {
           "lib/net45/_._": {}
@@ -3358,7 +3365,7 @@
           }
         }
       },
-      "UiPath.Excel.Activities/2.11.2-preview": {
+      "UiPath.Excel.Activities/2.11.3": {
         "type": "package",
         "dependencies": {
           "ClosedXML": "0.87.1",
@@ -3371,6 +3378,9 @@
           "lib/net461/_._": {}
         },
         "runtime": {
+          "lib/net461/Microsoft.Office.Interop.Excel.dll": {},
+          "lib/net461/Microsoft.Vbe.Interop.dll": {},
+          "lib/net461/Office.dll": {},
           "lib/net461/UiPath.Excel.Activities.Design.dll": {},
           "lib/net461/UiPath.Excel.Activities.Package.dll": {},
           "lib/net461/UiPath.Excel.Activities.dll": {},
@@ -3478,7 +3488,7 @@
           }
         }
       },
-      "UiPath.ImageProcessing/21.10.0": {
+      "UiPath.ImageProcessing/21.10.2": {
         "type": "package",
         "compile": {
           "lib/net461/_._": {}
@@ -3487,7 +3497,7 @@
           "lib/net461/UiPath.ImageProcessingInterop.dll": {}
         }
       },
-      "UiPath.Mail.Activities/1.12.0-preview": {
+      "UiPath.Mail.Activities/1.12.1": {
         "type": "package",
         "dependencies": {
           "Google.Apis.Calendar.v3": "1.43.0.1872",
@@ -3502,12 +3512,16 @@
           "System.ValueTuple": "4.5.0",
           "UiPath.Activities.RuntimeGovernance": "1.1.2",
           "UiPath.ConnectionClient": "1.0.0-20210921.1",
-          "UiPath.Platform": "21.10.0-beta.1879279"
+          "UiPath.Platform": "21.10.0"
         },
         "compile": {
           "lib/net461/_._": {}
         },
         "runtime": {
+          "lib/net461/Interop.Domino.UiPath.dll": {},
+          "lib/net461/Microsoft.Office.Interop.Outlook.dll": {},
+          "lib/net461/Microsoft.Office.Interop.Word.dll": {},
+          "lib/net461/Office.dll": {},
           "lib/net461/UiPath.Mail.Activities.Design.dll": {},
           "lib/net461/UiPath.Mail.Activities.Package.dll": {},
           "lib/net461/UiPath.Mail.Activities.dll": {},
@@ -3616,10 +3630,10 @@
           }
         }
       },
-      "UiPath.OCR.Activities/3.3.1-preview": {
+      "UiPath.OCR.Activities/3.3.2": {
         "type": "package",
         "dependencies": {
-          "UiPath.OCR.Contracts": "2.9.1-preview"
+          "UiPath.OCR.Contracts": "2.9.1"
         },
         "compile": {
           "lib/net461/_._": {}
@@ -3698,7 +3712,7 @@
           }
         }
       },
-      "UiPath.OCR.Contracts/2.9.1-preview": {
+      "UiPath.OCR.Contracts/2.9.1": {
         "type": "package",
         "frameworkAssemblies": [
           "System.Activities"
@@ -3727,7 +3741,7 @@
           "lib/net461/UiPath.Platform.dll": {}
         }
       },
-      "UiPath.System.Activities/21.10.0-preview": {
+      "UiPath.System.Activities/21.10.0": {
         "type": "package",
         "dependencies": {
           "CsvHelper": "16.0.0",
@@ -3742,7 +3756,7 @@
           "Newtonsoft.Json": "11.0.2",
           "SharpZipLib": "1.2.0",
           "System.Management.Automation": "6.1.7601.17515",
-          "UiPath.Platform": "21.10.0-preview",
+          "UiPath.Platform": "21.10.0",
           "UiPath.Telemetry.Client": "1.5.3"
         },
         "compile": {
@@ -3836,19 +3850,19 @@
           "lib/net461/TelemetryClient.dll": {}
         }
       },
-      "UiPath.UIAutomation.Activities/21.10.0-preview": {
+      "UiPath.UIAutomation.Activities/21.11.0-preview": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
           "System.IO.Abstractions": "3.0.10",
-          "UiPath": "[21.10.29.32675]",
+          "UiPath": "[21.11.30.35388-preview]",
           "UiPath.Activities.RuntimeGovernance": "1.1.2",
-          "UiPath.ImageProcessing": "21.10.0",
-          "UiPath.OCR.Activities": "3.3.1-preview",
-          "UiPath.OCR.Contracts": "2.9.1-preview",
+          "UiPath.ImageProcessing": "21.10.2",
+          "UiPath.OCR.Activities": "3.3.2",
+          "UiPath.OCR.Contracts": "2.9.1",
           "UiPath.Platform": "21.10.0",
           "UiPath.Telemetry.Client": "1.5.3",
-          "UiPath.Vision": "3.1.3-preview"
+          "UiPath.Vision": "3.1.4"
         },
         "compile": {
           "lib/net461/_._": {}
@@ -4132,10 +4146,10 @@
           }
         }
       },
-      "UiPath.Vision/3.1.3-preview": {
+      "UiPath.Vision/3.1.4": {
         "type": "package",
         "dependencies": {
-          "UiPath.OCR.Contracts": "2.9.1-preview"
+          "UiPath.OCR.Contracts": "2.9.1"
         },
         "compile": {
           "lib/net461/_._": {}
@@ -6419,10 +6433,10 @@
         "version.txt"
       ]
     },
-    "UiPath/21.10.29.32675": {
-      "sha512": "VoVN9yLr9YBIiNJeD/onNyJYgAfWhOy06kdnT5krmF0Kr0x4AtZ/hork5xtQiOInAMZMJLhO1cJWN/axsvWCnw==",
+    "UiPath/21.11.30.35388-preview": {
+      "sha512": "H29STe8Z7W9o9mAG6auoWQ+0Xg3drl/FsVRZP6hN/aZgP0ez8k0YmWSiRkls3K+a5VfdXvHKeLErxxnpm4wGvA==",
       "type": "package",
-      "path": "uipath/21.10.29.32675",
+      "path": "uipath/21.11.30.35388-preview",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6476,7 +6490,7 @@
         "build/UiPath/slinject.exe",
         "lib/net45/UiPath.Interop.dll",
         "lib/net5.0-windows7.0/UiPath.Interop.dll",
-        "uipath.21.10.29.32675.nupkg.sha512",
+        "uipath.21.11.30.35388-preview.nupkg.sha512",
         "uipath.nuspec"
       ]
     },
@@ -6543,13 +6557,16 @@
         "uipath.credentials.activities.nuspec"
       ]
     },
-    "UiPath.Excel.Activities/2.11.2-preview": {
-      "sha512": "KPB11um6Gqr4Xutw49QyJ/yPYW64FjYEEcatYwrmsECcsUaE4b93y4I9/hFOMWmIalpLBQjZFq9CUBZpWYihpQ==",
+    "UiPath.Excel.Activities/2.11.3": {
+      "sha512": "cA/xqVpRSFhll0hE8b9GCfy2nTejLB/AZxjbutRsv5Y0t/y0kkFSA3CzGn9Q9Ny/y8TBORRBQOM9cuY0S37sfw==",
       "type": "package",
-      "path": "uipath.excel.activities/2.11.2-preview",
+      "path": "uipath.excel.activities/2.11.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "lib/net461/Microsoft.Office.Interop.Excel.dll",
+        "lib/net461/Microsoft.Vbe.Interop.dll",
+        "lib/net461/Office.dll",
         "lib/net461/UiPath.Excel.Activities.Design.dll",
         "lib/net461/UiPath.Excel.Activities.Package.dll",
         "lib/net461/UiPath.Excel.Activities.dll",
@@ -6587,6 +6604,9 @@
         "lib/net461/zh-CN/UiPath.Excel.Activities.Design.resources.dll",
         "lib/net461/zh-CN/UiPath.Excel.Activities.resources.dll",
         "lib/net461/zh-CN/UiPath.Excel.resources.dll",
+        "lib/net5.0-windows7.0/Microsoft.Office.Interop.Excel.dll",
+        "lib/net5.0-windows7.0/Microsoft.Vbe.Interop.dll",
+        "lib/net5.0-windows7.0/Office.dll",
         "lib/net5.0-windows7.0/UiPath.Excel.Activities.Design.dll",
         "lib/net5.0-windows7.0/UiPath.Excel.Activities.Package.dll",
         "lib/net5.0-windows7.0/UiPath.Excel.Activities.dll",
@@ -6624,14 +6644,14 @@
         "lib/net5.0-windows7.0/zh-CN/UiPath.Excel.Activities.Design.resources.dll",
         "lib/net5.0-windows7.0/zh-CN/UiPath.Excel.Activities.resources.dll",
         "lib/net5.0-windows7.0/zh-CN/UiPath.Excel.resources.dll",
-        "uipath.excel.activities.2.11.2-preview.nupkg.sha512",
+        "uipath.excel.activities.2.11.3.nupkg.sha512",
         "uipath.excel.activities.nuspec"
       ]
     },
-    "UiPath.ImageProcessing/21.10.0": {
-      "sha512": "z/s1AIpaqwJGKm9d+xv+xKqDAkxQoXckoG/53juO3aPtwh0c3T7lwj5KR78bsjV4MAJYpaSQleJ9RsQVmuf96A==",
+    "UiPath.ImageProcessing/21.10.2": {
+      "sha512": "c+SiNdDpv/ecBpi5BsEAXWc5Upwu1d5voSZPPhZf87JEBOZkdIo33hguZhq7Ha6lcDKb8jgLVwg4zLyYz+5E3g==",
       "type": "package",
-      "path": "uipath.imageprocessing/21.10.0",
+      "path": "uipath.imageprocessing/21.10.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6640,6 +6660,7 @@
         "build/x64/msvcp140.dll",
         "build/x64/opencv_world341.dll",
         "build/x64/vcruntime140.dll",
+        "build/x64/vcruntime140_1.dll",
         "build/x86/UiPath.ImageProcessing.dll",
         "build/x86/concrt140.dll",
         "build/x86/msvcp140.dll",
@@ -6648,18 +6669,22 @@
         "lib/net461/UiPath.ImageProcessingInterop.dll",
         "lib/net5.0-windows7.0/UiPath.ImageProcessingInterop.dll",
         "lib/net5.0/UiPath.ImageProcessingInterop.dll",
-        "uipath.imageprocessing.21.10.0.nupkg.sha512",
+        "uipath.imageprocessing.21.10.2.nupkg.sha512",
         "uipath.imageprocessing.nuspec"
       ]
     },
-    "UiPath.Mail.Activities/1.12.0-preview": {
-      "sha512": "Cseu3wyzt7pzmeOknSKUD+LjiE3bWxfXGcBWLaZtRzjDlRHAcffpchbN8Lh/A3jbTO4PXuAZ5WV0q6D3Tszwiw==",
+    "UiPath.Mail.Activities/1.12.1": {
+      "sha512": "hj+alu0jnxhYg2TY8sDm7zuJ6KjG0WHiQXdRBOar6T/TBEUZpTtEVkBEhYuTaQsfpLsg5O6Ff/po44O5gfXmgQ==",
       "type": "package",
-      "path": "uipath.mail.activities/1.12.0-preview",
+      "path": "uipath.mail.activities/1.12.1",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "lib/net461/Interop.Domino.UiPath.dll",
+        "lib/net461/Microsoft.Office.Interop.Outlook.dll",
+        "lib/net461/Microsoft.Office.Interop.Word.dll",
+        "lib/net461/Office.dll",
         "lib/net461/UiPath.Mail.Activities.Design.dll",
         "lib/net461/UiPath.Mail.Activities.Package.dll",
         "lib/net461/UiPath.Mail.Activities.dll",
@@ -6698,6 +6723,10 @@
         "lib/net461/zh-CN/UiPath.Mail.Activities.Design.resources.dll",
         "lib/net461/zh-CN/UiPath.Mail.Activities.resources.dll",
         "lib/net461/zh-CN/UiPath.Mail.resources.dll",
+        "lib/net5.0-windows7.0/Interop.Domino.UiPath.dll",
+        "lib/net5.0-windows7.0/Microsoft.Office.Interop.Outlook.dll",
+        "lib/net5.0-windows7.0/Microsoft.Office.Interop.Word.dll",
+        "lib/net5.0-windows7.0/Office.dll",
         "lib/net5.0-windows7.0/UiPath.Mail.Activities.Design.dll",
         "lib/net5.0-windows7.0/UiPath.Mail.Activities.Package.dll",
         "lib/net5.0-windows7.0/UiPath.Mail.Activities.dll",
@@ -6883,14 +6912,14 @@
         "tools/net461/MainSessionServer/UiPath.Mail.MainSessionServer.exe",
         "tools/net461/MainSessionServer/UiPath.MainSessionServer.Shared.dll",
         "tools/net461/MainSessionServer/netstandard.dll",
-        "uipath.mail.activities.1.12.0-preview.nupkg.sha512",
+        "uipath.mail.activities.1.12.1.nupkg.sha512",
         "uipath.mail.activities.nuspec"
       ]
     },
-    "UiPath.OCR.Activities/3.3.1-preview": {
-      "sha512": "EnQ4k/Hh44yw0rYFk7IpkYeLuyDwW5HIYb/hRuJlv71UyHVGK3mA4+v3Z2kuwPJLS4hoYEqjsQNj1mXYOnzX3A==",
+    "UiPath.OCR.Activities/3.3.2": {
+      "sha512": "v+nO8WPYTf6itgjg/KGkUdseUZPsTlpgWUWYW+RjGQaLacMcEFVYwE3QzTMFCpT76v9YYld/Mmn9X2+gh6d+Eg==",
       "type": "package",
-      "path": "uipath.ocr.activities/3.3.1-preview",
+      "path": "uipath.ocr.activities/3.3.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7096,14 +7125,14 @@
         "lib/net5.0-windows7.0/tr/UiPath.OCR.Activities.resources.dll",
         "lib/net5.0-windows7.0/zh-CN/UiPath.OCR.Activities.Design.resources.dll",
         "lib/net5.0-windows7.0/zh-CN/UiPath.OCR.Activities.resources.dll",
-        "uipath.ocr.activities.3.3.1-preview.nupkg.sha512",
+        "uipath.ocr.activities.3.3.2.nupkg.sha512",
         "uipath.ocr.activities.nuspec"
       ]
     },
-    "UiPath.OCR.Contracts/2.9.1-preview": {
-      "sha512": "HOdSW7CQ3wMTnJ++gWfXJ0zh9yVA7W6Mhyye9mv3qfarw4WxYKNmwfVpHPkEcnu2M5cmTQ8i5gck91Qip+7sKQ==",
+    "UiPath.OCR.Contracts/2.9.1": {
+      "sha512": "xd+iDLtRzPVLC+6cYLAuiI+xCoPop5pd4xvEclruvrG2lyB2HhaIHTANT3ZRHl451ePEtxz3mXKbynCXKZfHeA==",
       "type": "package",
-      "path": "uipath.ocr.contracts/2.9.1-preview",
+      "path": "uipath.ocr.contracts/2.9.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7111,7 +7140,7 @@
         "lib/net461/UiPath.OCR.Contracts.xml",
         "lib/net5.0-windows7.0/UiPath.OCR.Contracts.dll",
         "lib/net5.0-windows7.0/UiPath.OCR.Contracts.xml",
-        "uipath.ocr.contracts.2.9.1-preview.nupkg.sha512",
+        "uipath.ocr.contracts.2.9.1.nupkg.sha512",
         "uipath.ocr.contracts.nuspec"
       ]
     },
@@ -7129,10 +7158,10 @@
         "uipath.platform.nuspec"
       ]
     },
-    "UiPath.System.Activities/21.10.0-preview": {
-      "sha512": "+tVLpGgk1Tgwkiz/ZuwsDlyhyt9XMWy1zFm/W8WRZQKxFugIhgVN6VbY5+OYvElvaZkkB0dcC96Z7vr1axLH2A==",
+    "UiPath.System.Activities/21.10.0": {
+      "sha512": "W+DyUt8sxwmeO7QrZT4YhbetgullENQej6htYxdhaCGYUCjxYNOUnDYNtCykSnSBGaWADSoWxF0Sg1UDzC8VJw==",
       "type": "package",
-      "path": "uipath.system.activities/21.10.0-preview",
+      "path": "uipath.system.activities/21.10.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7212,7 +7241,7 @@
         "lib/net5.0/ru/UiPath.System.Activities.resources.dll",
         "lib/net5.0/tr/UiPath.System.Activities.resources.dll",
         "lib/net5.0/zh-CN/UiPath.System.Activities.resources.dll",
-        "uipath.system.activities.21.10.0-preview.nupkg.sha512",
+        "uipath.system.activities.21.10.0.nupkg.sha512",
         "uipath.system.activities.nuspec"
       ]
     },
@@ -7230,10 +7259,10 @@
         "uipath.telemetry.client.nuspec"
       ]
     },
-    "UiPath.UIAutomation.Activities/21.10.0-preview": {
-      "sha512": "sWDfzpX1kUNvLCl9ueemlNA6vO21w+kK+/ZR9cxjTbpgbHldyxBGbHvIVTmzvNFFIvfFervyg9LdFgwRuV2kLw==",
+    "UiPath.UIAutomation.Activities/21.11.0-preview": {
+      "sha512": "OMF5WODHS3mS2XPlrluXtk//l6m3zxtlK6Ye6hAEmmjmHtg4QgPfyld2KcCgd3jf87kqlBE9ttvlJ7+Cm+EheQ==",
       "type": "package",
-      "path": "uipath.uiautomation.activities/21.10.0-preview",
+      "path": "uipath.uiautomation.activities/21.11.0-preview",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7488,14 +7517,26 @@
         "lib/net5.0-windows7.0/zh-CN/UiPath.UIAutomationNext.resources.dll",
         "lib/net5.0-windows7.0/zh-CN/UiPath.UiAutomation.Activities.resources.dll",
         "lib/net5.0-windows7.0/zh-CN/UiPath.Wizards.resources.dll",
-        "uipath.uiautomation.activities.21.10.0-preview.nupkg.sha512",
+        "lib/net5.0/UiPath.UIAutomationNext.Activities.dll",
+        "lib/net5.0/de/UiPath.UIAutomationNext.Activities.resources.dll",
+        "lib/net5.0/es-MX/UiPath.UIAutomationNext.Activities.resources.dll",
+        "lib/net5.0/es/UiPath.UIAutomationNext.Activities.resources.dll",
+        "lib/net5.0/fr/UiPath.UIAutomationNext.Activities.resources.dll",
+        "lib/net5.0/ja/UiPath.UIAutomationNext.Activities.resources.dll",
+        "lib/net5.0/ko/UiPath.UIAutomationNext.Activities.resources.dll",
+        "lib/net5.0/pt-BR/UiPath.UIAutomationNext.Activities.resources.dll",
+        "lib/net5.0/pt/UiPath.UIAutomationNext.Activities.resources.dll",
+        "lib/net5.0/ru/UiPath.UIAutomationNext.Activities.resources.dll",
+        "lib/net5.0/tr/UiPath.UIAutomationNext.Activities.resources.dll",
+        "lib/net5.0/zh-CN/UiPath.UIAutomationNext.Activities.resources.dll",
+        "uipath.uiautomation.activities.21.11.0-preview.nupkg.sha512",
         "uipath.uiautomation.activities.nuspec"
       ]
     },
-    "UiPath.Vision/3.1.3-preview": {
-      "sha512": "twxM5uQ8UspIJXkP6FdiA7IOZPPqmcgRgPgoAvDcTVkqaH3bTpxq8yrB5D5GmJppOyQbEfbvXtpUMcmP+QiHFQ==",
+    "UiPath.Vision/3.1.4": {
+      "sha512": "1lFqjlLmnayJ4rISZqXXoLteMJ4sCV5Fls9spxOIwyXJabMb4wM3s9tZ2K3Q1f8gpcz+U1FN3tsjzMbpH41vXA==",
       "type": "package",
-      "path": "uipath.vision/3.1.3-preview",
+      "path": "uipath.vision/3.1.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7690,7 +7731,7 @@
         "lib/net5.0-windows7.0/UiPath.Vision.GoogleCloud.dll",
         "lib/net5.0-windows7.0/UiPath.Vision.Tesseract.dll",
         "lib/net5.0-windows7.0/UiPath.Vision.dll",
-        "uipath.vision.3.1.3-preview.nupkg.sha512",
+        "uipath.vision.3.1.4.nupkg.sha512",
         "uipath.vision.nuspec"
       ]
     }
@@ -7699,10 +7740,10 @@
     "": [],
     ".NETFramework,Version=v4.6.1": [
       "UiPath.Credentials.Activities >= 2.0.0 <= 2.0.0",
-      "UiPath.Excel.Activities >= 2.11.2-preview <= 2.11.2-preview",
-      "UiPath.Mail.Activities >= 1.12.0-preview <= 1.12.0-preview",
-      "UiPath.System.Activities >= 21.10.0-preview <= 21.10.0-preview",
-      "UiPath.UIAutomation.Activities >= 21.10.0-preview <= 21.10.0-preview"
+      "UiPath.Excel.Activities >= 2.11.3 <= 2.11.3",
+      "UiPath.Mail.Activities >= 1.12.1 <= 1.12.1",
+      "UiPath.System.Activities >= 21.10.0 <= 21.10.0",
+      "UiPath.UIAutomation.Activities >= 21.11.0-preview <= 21.11.0-preview"
     ]
   },
   "packageFolders": {
@@ -7727,22 +7768,22 @@
           "UiPath.Excel.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[2.11.2-preview, 2.11.2-preview]"
+            "version": "[2.11.3, 2.11.3]"
           },
           "UiPath.Mail.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[1.12.0-preview, 1.12.0-preview]"
+            "version": "[1.12.1, 1.12.1]"
           },
           "UiPath.System.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[21.10.0-preview, 21.10.0-preview]"
+            "version": "[21.10.0, 21.10.0]"
           },
           "UiPath.UIAutomation.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[21.10.0-preview, 21.10.0-preview]"
+            "version": "[21.11.0-preview, 21.11.0-preview]"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Users\\Alkaiser\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
