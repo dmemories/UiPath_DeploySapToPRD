@@ -3,12 +3,12 @@
     <x:Property Name="out_dataTable" Type="OutArgument(sd:DataTable)" />
     <x:Property Name="out_currRound" Type="OutArgument(x:String)" />
     <x:Property Name="out_contactPoint" Type="OutArgument(x:String)" />
-    <x:Property Name="out_approver" Type="OutArgument(x:String)" />
+    <x:Property Name="out_approverName" Type="OutArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>749.153374233129,1750.38036809816</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>683.19018404908,2008.34355828221</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Get_WR_Data_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -80,25 +80,28 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Get_WR_Data" sap:VirtualizedContainerService.HintSize="597.20245398773,1685.59509202454" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Get_WR_Data" sap:VirtualizedContainerService.HintSize="597.20245398773,1943.55828220859" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ueab:ExcelProcessScopeX LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayAlerts="False" DisplayName="Excel Process Scope" ExistingProcessAction="None" FileConflictResolution="CloseWithoutSaving" sap:VirtualizedContainerService.HintSize="554.79754601227,903.460122699386" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3" ShowExcelWindow="False">
+    <ueab:ExcelProcessScopeX LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayAlerts="False" DisplayName="Excel Process Scope" ExistingProcessAction="None" FileConflictResolution="CloseWithoutSaving" sap:VirtualizedContainerService.HintSize="554.79754601227,1161.42331288344" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3" ShowExcelWindow="False">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" AutoSave="False" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="520.638036809816,817.472392638037" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ReadOnly="True" WorkbookPath="Data\Input\A.xlsx">
+          <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" AutoSave="False" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="520.638036809816,1075.43558282209" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ReadOnly="True" WorkbookPath="Data\Input\A.xlsx">
             <ueab:ExcelApplicationCard.Body>
               <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Exel Do" sap:VirtualizedContainerService.HintSize="486.478527607362,553.030674846626" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Exel Do" sap:VirtualizedContainerService.HintSize="486.478527607362,810.993865030675" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="sd:DataTable" Name="approverTable" />
+                  </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -110,16 +113,17 @@
                       <OutArgument x:TypeArguments="x:String">[out_contactPoint]</OutArgument>
                     </ueab:ReadCellValueX.SaveTo>
                   </ueab:ReadCellValueX>
-                  <Assign sap:VirtualizedContainerService.HintSize="444.073619631902,59.4846625766871" sap2010:WorkflowViewState.IdRef="Assign_5">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">[out_approver]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">
-                        <Literal x:TypeArguments="x:String" Value="" />
+                  <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="444.073619631902,165.496932515337" sap2010:WorkflowViewState.IdRef="ReadRangeX_4" Range="[Excel.Sheet(&quot;MasterApprover&quot;)]" SaveTo="[approverTable]" />
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get Approver Name" sap:VirtualizedContainerService.HintSize="444.073619631902,111.901840490798" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Invokes\Get_ApproverName.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="sd:DataTable" x:Key="in_approverTable">
+                        <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="approverTable" />
                       </InArgument>
-                    </Assign.Value>
-                  </Assign>
+                      <OutArgument x:TypeArguments="x:String" x:Key="out_approverName">
+                        <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="out_approverName" />
+                      </OutArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
                 </Sequence>
               </ActivityAction>
             </ueab:ExcelApplicationCard.Body>

@@ -1,1 +1,1 @@
-{"ProjectBreakpoints":"{\"Value\":{}}","ProjectWatches":"{\"Value\":[]}","OpenedDocuments":"[]"}
+{"ProjectBreakpoints":"{\"Value\":{\"invokes/create_wr.xaml\":[{\"ConditionalExpression\":null,\"ActionExpression\":null,\"ExpectedHitCounter\":null,\"ShouldContinueAfterAction\":false,\"IsTransient\":false,\"IsEnabled\":true,\"Id\":\"b5ea413f-ee4f-4e76-8812-62d0fb8df538\",\"ActivityIdRef\":\"NClick_39\",\"ActivityId\":\"1.18\",\"ActivityName\":\"Click OK\"}]}}","ProjectWatches":"{\"Value\":[]}","OpenedDocuments":"[\"Main.xaml\"]"}
